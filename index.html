@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript 30 Day Challenge</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="scripts.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>JavaScript 30 Day Challenge</h1>
+            <p>Welcome to the JavaScript 30 Day Challenge! Improve your JS skills with a new project every day.</p>
+        </header>
+        <main>
+            <section id="project-list">
+                <h2>Projects</h2>
+                <ul id="content">
+                    <li><a href="01 - JavaScript Drum Kit/index.html">Day 1: JavaScript Drum Kit</a></li>
+                    <!-- Add more list items here for each day's project -->
+                    <script>
+                        var contentDiv = document.getElementById('content');
+                
+                        for(var i = 1; i < 30; i++) {
+                            var list = document.createElement('li');
+                            var aTag = document.createElement('a');
+                            aTag.textContent = 'Day '+ (i+1) +': Project Name ';
+                            aTag.href = '#project'+(i+1);
+                            list.appendChild(aTag);
+                            contentDiv.appendChild(list);
+                        }
+                    </script>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 Your Name. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
