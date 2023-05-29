@@ -56,14 +56,15 @@ kbd {
   left: 10px;
   font-size: 15px;
   padding: 10px;
-  background-color: #808080;
+  background: rgba(0,0,0,0.4);
   border-radius: 25px;
   border: 2.5px solid #000;
-  color: #000;
+  color: #fff;
   font-weight: bold;
   text-decoration: none;
+  text-shadow: 0 0 .5rem black;
 }
 
 #home:hover {
-  opacity: 0.75;
+  box-shadow: 0 0 1rem #ffc600;
 }
