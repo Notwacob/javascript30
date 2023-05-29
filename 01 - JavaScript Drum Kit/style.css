@@ -49,3 +49,21 @@ kbd {
   letter-spacing: .1rem;
   color: #ffc600;
 }
+
+#home {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 15px;
+  padding: 10px;
+  background-color: #808080;
+  border-radius: 25px;
+  border: 2.5px solid #000;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#home:hover {
+  opacity: 0.75;
+}
