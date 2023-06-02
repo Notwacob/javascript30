@@ -1,41 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>JavaScript 30 Day Challenge</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <script src="scripts.js"></script>
-        <link rel="icon" href="favicon.ico" />
-    </head>
-    <body>
-        <header>
-            <h1>JavaScript 30 Day Challenge</h1>
-            <p>Welcome to the JavaScript 30 Day Challenge! Improve your JS skills with a new project every day.</p>
-        </header>
-        <main>
-            <section id="project-list">
-                <h2>Projects</h2>
-                <ul id="content">
-                    <li><a href="01-JavaScript_Drum_Kit/index.html">Day 1: JavaScript Drum Kit</a></li>
-                    <li><a href="02-JS_and_CSS_Clock/index.html">Day 2: JS and CSS Clock</a></li>
-                    <li><a href="03-CSS_Variables/index.html">Day 3: CSS Variables</a></li>
-                    <!-- Add more list items here for each day's project -->
-                    <script>
-                        var contentDiv = document.getElementById('content');
-                
-                        for(var i = 3; i < 30; i++) {
-                            var list = document.createElement('li');
-                            var aTag = document.createElement('a');
-                            aTag.textContent = 'Day '+ (i+1) +': Project Name ';
-                            aTag.href = '#project'+(i+1);
-                            list.appendChild(aTag);
-                            contentDiv.appendChild(list);
-                        }
-                    </script>
-                </ul>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2023 Your Name. All rights reserved.</p>
-        </footer>
-    </body>
+  <head>
+    <title>JavaScript 30 Day Challenge</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="icon" href="favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <h1>JavaScript 30 Day Challenge</h1>
+      <p>
+        Welcome to the JavaScript 30 Day Challenge! Improve your JS skills with
+        a new project every day.
+      </p>
+      <a href="https://notwacob.github.io" class="btn">Home</a>
+    </header>
+    <div class="grid-container" id="grid">
+      <a href="01-JavaScript_Drum_Kit/index.html" class="grid-item">
+        <p><span class="bold">Day 1</span><br />JavaScript Drum Kit</p>
+      </a>
+      <a href="02-JS_and_CSS_Clock/index.html" class="grid-item">
+        <p><span class="bold">Day 2</span><br />JS and CSS Clock</p>
+      </a>
+      <a href="03-CSS_Variables/index.html" class="grid-item">
+        <p><span class="bold">Day 3</span><br />CSS Variables</p>
+      </a>
+      <script>
+        var contentDiv = document.getElementById("grid");
+        for (var i = 3; i < 30; i++) {
+          var aTag = document.createElement("a");
+          var p = document.createElement("p");
+          var span = document.createElement("span");
+          var lineBreak = document.createElement("br");
+          var textNode = document.createTextNode("[Project Name]");
+
+          aTag.href = "#day" + (i + 1);
+          aTag.classList.add("grid-item");
+
+          span.classList.add("bold");
+          span.textContent = "Day " + (i + 1);
+
+          p.appendChild(span);
+          p.appendChild(lineBreak);
+          p.appendChild(textNode);
+          aTag.appendChild(p);
+          contentDiv.appendChild(aTag);
+        }
+      </script>
+    </div>
+    <footer>
+      <p>&copy; 2023 Jacob Wilson. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
