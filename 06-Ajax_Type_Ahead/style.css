@@ -28,7 +28,7 @@ html {
 }
 
 #home:hover {
-    box-shadow: 0 0 1rem #ffc600;
+    box-shadow: 0 0 1rem #888888;
 }
 
 input {
