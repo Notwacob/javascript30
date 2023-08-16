@@ -80,6 +80,12 @@ footer {
     font-weight: bold;
 }
 
+@media (min-width: 1400px) {
+  .grid-item.offset {
+    grid-column-start: 2; /* Starts at the second column */
+  }
+}
+
 @media (min-width: 992px) and (max-width: 1399px) {
     .grid-container {
       grid-template-columns: repeat(3, 1fr);

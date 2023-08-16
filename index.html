@@ -24,9 +24,12 @@
       <a href="03-CSS_Variables/index.html" class="grid-item">
         <p><span class="bold">Day 3</span><br />CSS Variables</p>
       </a>
+      <a href="04-Array_Cardio_Day_1/index.html" class="grid-item">
+        <p><span class="bold">Day 4</span><br />Array Cardio Day 1</p>
+      </a>
       <script>
         var contentDiv = document.getElementById("grid");
-        for (var i = 3; i < 30; i++) {
+        for (var i = 4; i < 30; i++) {
           var aTag = document.createElement("a");
           var p = document.createElement("p");
           var span = document.createElement("span");
@@ -35,6 +38,9 @@
 
           aTag.href = "#day" + (i + 1);
           aTag.classList.add("grid-item");
+          if (i+1 == 29) {
+            aTag.classList.add("offset");
+          }
 
           span.classList.add("bold");
           span.textContent = "Day " + (i + 1);
