@@ -4,32 +4,41 @@ h1,
 h2,
 p,
 ul {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6em;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6em;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
 }
 
 header h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 24px;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
 }
 
 header p {
-  margin: 10px 0;
+    margin: 10px 0;
+}
+
+header a#courseLink {
+    color: white;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+header a#courseLink:hover {
+    box-shadow: 0 0 10px rgba(122, 122, 122, 0.733);
 }
 
 .btn {
@@ -39,41 +48,44 @@ header p {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-  }
-  
-  .btn:hover {
+}
+
+.btn:hover {
     background-color: #777;
-  }
+}
 
 footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Creates three equal-width columns */
-  grid-gap: 10px; /* Sets the gap between grid items */
-  width: 80%;
-  margin: 10px auto 56px auto;
+    display: grid;
+    grid-template-columns: repeat(
+        4,
+        1fr
+    ); /* Creates three equal-width columns */
+    grid-gap: 10px; /* Sets the gap between grid items */
+    width: 80%;
+    margin: 10px auto 56px auto;
 }
 
 .grid-item {
-  background-color: #ddd;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  color: #333;
-  border-radius: 5px;
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
 }
 
 .grid-item:hover {
-  background-color: #ccc;
+    background-color: #ccc;
 }
 
 .bold {
@@ -81,25 +93,25 @@ footer {
 }
 
 @media (min-width: 1400px) {
-  .grid-item.offset {
-    grid-column-start: 2; /* Starts at the second column */
-  }
+    .grid-item.offset {
+        grid-column-start: 2; /* Starts at the second column */
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1399px) {
     .grid-container {
-      grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
-  }
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 767px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
 }
